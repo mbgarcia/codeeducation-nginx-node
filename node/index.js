@@ -1,11 +1,7 @@
 const express = require('express')
-
 const mysql = require('mysql')
-
 const app = express()
-
 const port = 3000
-
 const config = {
     host: 'db',
     user: 'root',
@@ -31,7 +27,7 @@ connection.query(sql, (error, results) => {
     if (error) {
         return console.error(error.message);
     }
-
+    
     names = results.map(c => `<li>${c.name}</li>`).join('')
 });
 

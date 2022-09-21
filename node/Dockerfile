@@ -4,6 +4,10 @@ WORKDIR /usr/src/app
 
 COPY docker-entrypoint.sh /docker-entrypoint.sh
 
+COPY *.js .
+
+COPY *.json .
+
 RUN chmod +x /docker-entrypoint.sh
 
 RUN apt-get update && apt-get install -y wget
